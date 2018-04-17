@@ -30,11 +30,11 @@ while guesses_left > 0:
         if letter in letters_guessed:
             output.append(letter)
 
-        if letters_guessed == randomWord:
-            print("You win")
-
         else:
             output.append("*")
+
+        if letters_guessed == randomWord:
+            print("You win")
 
     # print(output)
     print("".join(output))
