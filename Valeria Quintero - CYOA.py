@@ -31,78 +31,78 @@ class Weapon(Item):
         print("You pick up the weapon")
 
 
-class sword(Weapon):
+class Sword(Weapon):
     def __init__(self, name, weight, color, attack):
-        super(sword, self).__init__(name, weight, color, "Use it to attack")
+        super(Sword, self).__init__(name, weight, color, "Use it to attack")
         self.attack = attack
 
     def carry(self):
         print("You carry the sword and it weighs %d" % self.weight)
 
 
-class spell(Weapon):
+class SpellBottle(Weapon):
     def __init__(self, name, weight, color, attack):
-        super(spell, self).__init__(name, weight, color, "Use it to attack")
+        super(SpellBottle, self).__init__(name, weight, color, "Use it to attack")
         self.attack = attack
 
     def write(self):
         print("You write a spell on the enemy")
 
 
-class crossbow(Weapon):
+class Crossbow(Weapon):
     def __init__(self, name, weight, color, attack):
-        super(crossbow, self).__init__(name, weight, color, "Use it to attack")
+        super(Crossbow, self).__init__(name, weight, color, "Use it to attack")
         self.attack = attack
 
     def grab(self):
         print("You grab the crossbow")
 
 
-class arrow(crossbow):
+class Arrow(Crossbow):
     def __init__(self, name, weight, color, attack):
-        super(arrow, self).__init__(name, weight, color, "Use it to attack with the crossbow")
+        super(Arrow, self).__init__(name, weight, color, "Use it to attack with the crossbow")
         self.attack = attack
 
     def attack(self):
         print("Attack the enemy using the crossbow and arrow")
 
 
-class clothing(Item):
+class Clothing(Item):
     def __init__(self, name, weight, color, attack):
-        super(clothing, self).__init__(name, weight, color, attack)
+        super(Clothing, self).__init__(name, weight, color, attack)
 
     def use(self):
         print("You use the clothing and the brand is %s" % self.name)
 
 
-class armor(clothing):
+class Armor(Clothing):
     def __init__(self, name, weight, color, attack):
-        super(armor, self).__init__(name, weight, color, "Use the armor for protection")
+        super(Armor, self).__init__(name, weight, color, "Use the armor for protection")
         self.attack = attack
 
     def use(self):
         print("You use the armor")
 
 
-class helmet(armor):
+class Helmet(Armor):
     def __init__(self, name, weight, color, attack):
-        super(helmet, self).__init__(name, "1 pound", color, attack)
+        super(Helmet, self).__init__(name, "1 pound", color, attack)
         self.weight = weight
 
     def put(self):
         print("You put on the helmet")
 
 
-class shield(armor):
+class Shield(Armor):
     def __init__(self, name, weight, color, attack):
-        super(shield, self).__init__(name, weight, color, "Use it to defend")
+        super(Shield, self).__init__(name, weight, color, "Use it to defend")
         self.attack = attack
 
     def hold(self):
         print("You hold the shield in your hand")
 
 
-class BulletproofVest(armor):
+class BulletproofVest(Armor):
     def __init__(self, name, weight, color, attack):
         super(BulletproofVest, self).__init__(name, weight, color, "Use the bulletproof vest for protection")
         self.attack = attack
@@ -111,59 +111,59 @@ class BulletproofVest(armor):
         print("You wear the bulletproof vest")
 
 
-class shirt(clothing):
+class Shirt(Clothing):
     def __init__(self, name, weight, color, attack):
-        super(shirt, self).__init__(name, weight, "blue", attack)
+        super(Shirt, self).__init__(name, weight, "blue", attack)
         self.color = color
 
     def wear(self):
         print("You wear the %s shirt" % self.color)
 
 
-class shoes(clothing):
+class Shoes(Clothing):
     def __init__(self, name, weight, color, attack):
-        super(shoes, self).__init__(name, weight, "black and white", attack)
+        super(Shoes, self).__init__(name, weight, "black and white", attack)
         self.color = color
 
     def put(self):
         print("You put on the %s shoes" % self.color)
 
 
-class pants(clothing):
+class Pants(Clothing):
     def __init__(self, name, weight, color, attack):
-        super(pants, self).__init__(name, weight, "black", attack)
+        super(Pants, self).__init__(name, weight, "black", attack)
         self.color = color
 
     def wear(self):
         print("You wear %s pants" % self.color)
 
 
-class accessory(Item):
+class Accessory(Item):
     def __init__(self, name, weight, color, attack):
-        super(accessory, self).__init__(name, weight, color, attack)
+        super(Accessory, self).__init__(name, weight, color, attack)
 
     def find(self):
         print("You find an accessory")
 
 
-class hat(accessory):
+class Hat(Accessory):
     def __init__(self, name, weight, color, attack):
-        super(hat, self).__init__(name, weight, "white", attack)
+        super(Hat, self).__init__(name, weight, "white", attack)
         self.color = color
 
     def wear(self):
         print("You wear a %s hat" % self.color)
 
 
-class consumable(Item):
+class Consumable(Item):
     def __init__(self, name, weight, color, attack):
-        super(consumable, self).__init__(name, weight, color, attack)
+        super(Consumable, self).__init__(name, weight, color, attack)
 
     def use(self):
         print("You use the %s" % self.name)
 
 
-class HealingPotion(consumable):
+class HealingPotion(Consumable):
     def __init__(self, name, weight, color, attack):
         super(HealingPotion, self).__init__(name, weight, color, attack)
 
@@ -171,15 +171,15 @@ class HealingPotion(consumable):
         print("You drink the healing potion")
 
 
-class apple(consumable):
+class Apple(Consumable):
     def __init__(self, name, weight, color, attack):
-        super(apple, self).__init__(name, weight, color, attack)
+        super(Apple, self).__init__(name, weight, color, attack)
 
     def eat(self):
         print("You eat the apple")
 
 
-class MedKit(consumable):
+class MedKit(Consumable):
     def __init__(self, name, weight, color, attack):
         super(MedKit, self).__init__(name, weight, color, attack)
 
@@ -201,8 +201,10 @@ class Character(object):
     def run(self):
         print("You run away")
 
+
 class Room(object):
-    def __init__(self, name, north, south, east, west, southeast, southwest, northeast, northwest, description):
+    def __init__(self, name, north, south, east, west, southeast, southwest, northeast, northwest, description,
+                 item=None):
         self.name = name
         self.north = north
         self.south = south
@@ -213,11 +215,29 @@ class Room(object):
         self.southwest = southwest
         self.southeast = southeast
         self.description = description
+        self.item = item
 
     def move(self, direction):
         global current_node
         current_node = globals()[getattr(self, direction)]
 
+
+# Initialize Items
+Sword = Sword(Sword, "4 pounds", "silver", "Use the sword to defend yourself")
+SpellBottle = SpellBottle(SpellBottle, "1 pound", None, "Use the spell to heal")
+Crossbow = Crossbow(Crossbow, "50 pounds", "brown", "Use the crossbow and the arrow to attack")
+Arrow = Arrow(Arrow, None, None, "Use the arrows and the crossbow to attack")
+Armor = Armor(Armor, "70 pounds", "bronze", "Use the armor for protection")
+Helmet = Helmet(Helmet, "1 pound", "bronze", "Use the helmet for protection")
+Shield = Shield(Shield, "15 pounds", "silver", "Use the shield to defend")
+BulletproofVest = BulletproofVest(BulletproofVest, "5 pounds", "black", "Use the bulletproof vest for protection")
+Shirt = Shirt(Shirt, None, "Blue", None)
+Shoes = Shoes(Shoes, None, "Black and white", None)
+Pants = Pants(Pants, None, "Black", None)
+Hat = Hat(Hat, None, "White", None)
+HealingPotion = HealingPotion
+Apple = Apple
+MedKit = MedKit
 
 # Initialize Rooms
 FRONTHOUSE = Room('Front of House', None, None, None, None, "LIVING_ROOM", "GARDEN", None, None,
