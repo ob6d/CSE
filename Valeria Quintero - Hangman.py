@@ -1,14 +1,3 @@
-"""
-A general guide for Hangman
-1. Make a word bank - 10 items, can be a list of movies or phrases  *
-2. Pick an item from the list  *
-3. Add a guess to the list of letters guessed
-4. Reveal letters already guessed
-5. Create the win and lose conditions
-#guesses_left =
-#letters_guessed = []
-#output = ['']
-"""
 import random
 word_bank = ["soccer", "Magic Mountain", "Edison High School", "Fresno Fair", "nike", "adidas", "Fashion Fair",
              "Regal Cinemas", "Dave and Busters", "New York City"]

@@ -146,6 +146,14 @@ class Accessory(Item):
         print("You find an accessory")
 
 
+class FlashLight(Item):
+    def __init__(self, name, weight, color, attack):
+        super(FlashLight, self).__init__(name, weight, color, attack)
+
+    def use(self):
+        print("You use the flashlight")
+
+
 class Hat(Accessory):
     def __init__(self, name, weight, color, attack):
         super(Hat, self).__init__(name, weight, "white", attack)
@@ -173,7 +181,7 @@ class HealingPotion(Consumable):
 
 class Apple(Consumable):
     def __init__(self, name, weight, color, attack):
-        super(Apple, self).__init__(name, weight, color, attack)
+        super(Apple, self).__init__(name, weight, color, "Eat the apple to get energy")
 
     def eat(self):
         print("You eat the apple")
@@ -231,48 +239,49 @@ Armor = Armor(Armor, "70 pounds", "bronze", "Use the armor for protection")
 Helmet = Helmet(Helmet, "1 pound", "bronze", "Use the helmet for protection")
 Shield = Shield(Shield, "15 pounds", "silver", "Use the shield to defend")
 BulletproofVest = BulletproofVest(BulletproofVest, "5 pounds", "black", "Use the bulletproof vest for protection")
-Shirt = Shirt(Shirt, None, "Blue", None)
-Shoes = Shoes(Shoes, None, "Black and white", None)
-Pants = Pants(Pants, None, "Black", None)
-Hat = Hat(Hat, None, "White", None)
+Shirt = Shirt(Shirt, None, "blue", None)
+Shoes = Shoes(Shoes, None, "black and white", None)
+Pants = Pants(Pants, None, "black", None)
+FlashLight = FlashLight(FlashLight, None, "red", "Use the flashlight if you can't see")
+Hat = Hat(Hat, None, "white", None)
 HealingPotion = HealingPotion
-Apple = Apple
-MedKit = MedKit
+Apple = Apple(Apple, None, None, "Eat the apple to get energy")
+MedKit = MedKit(MedKit, "2 pounds", None, "Use the medkit when you're injured or need something")
 
 # Initialize Rooms
 FRONTHOUSE = Room('Front of House', None, None, None, None, "LIVING_ROOM", "GARDEN", None, None,
                   "You are NORTHEAST of the GARDEN and NORTHWEST of the LIVING_ROOM")
 LIVING_ROOM = Room('Living Room', None, 'KITCHEN', None, None, None, None, None, 'FRONTHOUSE',
-                   "You are NORTH of the KITCHEN and SOUTHEAST of the FRONTHOUSE")
+                   "You are NORTH of the KITCHEN and SOUTHEAST of the FRONTHOUSE", "Sword")
 KITCHEN = Room('The Kitchen', 'LIVING_ROOM', 'TUNNEL', 'RIGHTHOUSE', None, None, None, None, None,
-               "You are SOUTH of the LIVING_ROOM, WEST of the RIGHTHOUSE, and NORTH of the TUNNEL")
+               "You are SOUTH of the LIVING_ROOM, WEST of the RIGHTHOUSE, and NORTH of the TUNNEL", "Apple")
 RIGHTHOUSE = Room('Right Side of House', None, None, None, "KITCHEN", None, None, None, None,
-                  "You are EAST of the KITCHEN")
+                  "You are EAST of the KITCHEN", "Crossbow, Arrow")
 TUNNEL = Room('The Tunnel', "KITCHEN", None, None, None, None, 'CAVEROOM', None, None,
               "You are SOUTH of the KITCHEN and NORTHEAST of the CAVEROOM")
 SMALLROOM = Room('The Small Room', None, None, None, None, None, 'MYSTERYROOM', "LIVING_ROOM", None,
-                 "You are SOUTHWEST of the LIVING_ROOM and NORTHEAST of the MYSTERYROOM")
+                 "You are SOUTHWEST of the LIVING_ROOM and NORTHEAST of the MYSTERYROOM", "Shirt, Pants, Shoes")
 GARDEN = Room('The Garden', None, 'CIRCLEROOM', None, None, None, None, "FRONTHOUSE", None,
-              "You are SOUTHWEST of the FRONTHOUSE and NORTH of the CIRCLEROOM")
+              "You are SOUTHWEST of the FRONTHOUSE and NORTH of the CIRCLEROOM", "SpellBottle")
 CIRCLEROOM = Room('The Circle Room', "GARDEN", 'CELLAR', None, None, None, None, None, None,
-                  "You are NORTH of the CELLAR and SOUTH of the GARDEN")
+                  "You are NORTH of the CELLAR and SOUTH of the GARDEN", "Armor, Helmet, Shield")
 MYSTERYROOM = Room('The Mystery Room', None, None, None, None, None, 'CELLAR', "SMALLROOM", None,
-                   "You are SOUTHWEST of the SMALLROOM and NORTHEAST of the CELLAR")
+                   "You are SOUTHWEST of the SMALLROOM and NORTHEAST of the CELLAR", "HealingPotion")
 CAVEROOM = Room('The Cave Room', None, 'TROLLROOM', None, 'CELLAR', None, None, "TUNNEL", None,
                 "You are SOUTHWEST of the TUNNEL, EAST of the CELLAR, and NORTH of the TROLLROOM")
 LEFTHOUSE = Room('Left Side of House', None, None, "CIRCLEROOM", None, None, None, None, None,
-                 "You are WEST of the CIRCLEROOM")
+                 "You are WEST of the CIRCLEROOM", "MedKit")
 CELLAR = Room('The Cellar', "CIRCLEROOM", 'TREASUREROOM', 'CAVEROOM', None, None, 'ATTIC', 'MYSTERYROOM', None,
               "You are SOUTH of the CIRCLEROOM, SOUTHWEST of the MYSTERYROOM, NORTH of the TREASUREROOM,"
-              "NORTHEAST of the ATTIC, and WEST of the CAVEROOM")
+              "NORTHEAST of the ATTIC, and WEST of the CAVEROOM", "Flashlight")
 ATTIC = Room('The Attic', None, "BACKHOUSE", None, None, None, None, 'CELLAR', None,
-             "You are NORTH of the BACKHOUSE and SOUTHWEST of the CELLAR")
+             "You are NORTH of the BACKHOUSE and SOUTHWEST of the CELLAR", "BulletproofVest")
 TREASUREROOM = Room('The Treasure Room', "CELLAR", None, None, None, 'CAGEROOM', None, None, None,
-                    "You are SOUTH of the CELLAR and NORTHWEST of the CAGEROOM")
+                    "You are SOUTH of the CELLAR and NORTHWEST of the CAGEROOM", "HealingPotion, Armor")
 TROLLROOM = Room('The Troll Room', "CAVEROOM", 'CAGEROOM', None, None, None, None, None, None,
                  "You are NORTH of the CAGEROOM and SOUTH of the CAVEROOM")
 BACKHOUSE = Room('Back of House', "ATTIC", None, None, None, None, None, None, None,
-                 "You are SOUTH of the ATTIC")
+                 "You are SOUTH of the ATTIC", "SpellBottle, MedKit")
 CAGEROOM = Room('The Cage Room', "TROLLROOM", None, None, None, None, None, None, 'TREASUREROOM',
                 "You are SOUTH of the TROLLROOM and SOUTHEAST of the TREASUREROOM")
 
