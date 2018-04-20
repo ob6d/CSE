@@ -12,19 +12,28 @@ print(a)
 print(b)
 print(a + b)
 total = (a + b)
-
 money = 15
+maxRoll = round
+round = 0
 str1 = round
 
-while money > 0:
+while money >= 0:
+    a = random.randint(1, 6)
+    b = random.randint(1, 6)
+    total = (a + b)
+    round += 1
 
     if total == 7:
         money += 4
         print("You have %d dollars left" % money)
+        print("Round %d" % round)
 
     if total != 7:
         money -= 1
         print("You have %d dollars left" % money)
+        print("Round %d" % round)
 
-if money == 0:
-    print("You lose")
+    elif money == 0:
+        print("You lost")
+        print("You lasted %d rounds" % round)
+
