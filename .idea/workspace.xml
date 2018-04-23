@@ -10,18 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Valeria Quintero Lucky 7's.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Valeria Quintero Lucky 7's.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,8 +44,8 @@
         <option value="$PROJECT_DIR$/Valeria Quintero.py" />
         <option value="$PROJECT_DIR$/Valeria Quintero - Character.py" />
         <option value="$PROJECT_DIR$/Valeria Quintero - Programmer.py" />
-        <option value="$PROJECT_DIR$/Valeria Quintero - Items.py" />
         <option value="$PROJECT_DIR$/Valeria Quintero - Hangman.py" />
+        <option value="$PROJECT_DIR$/Valeria Quintero - Items.py" />
         <option value="$PROJECT_DIR$/Valeria Quintero - CYOA.py" />
         <option value="$PROJECT_DIR$/Valeria Quintero Lucky 7's.py" />
       </list>
@@ -83,7 +72,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,7 +84,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,8 +199,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Valeria Quintero Lucky 7's" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Valeria Quintero - Hangman" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Valeria Quintero - CYOA" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Valeria Quintero - CYOA" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Valeria Quintero - Hangman" />
         <item index="3" class="java.lang.String" itemvalue="Python.Valeria Quintero - World Map OOP" />
         <item index="4" class="java.lang.String" itemvalue="Python.Valeria Quintero - Programmer" />
       </list>
@@ -496,13 +485,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Function Notes.py" />
     <entry file="file://$PROJECT_DIR$/Valeria Quintero.py" />
-    <entry file="file://$PROJECT_DIR$/Valeria Quintero - Items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Valeria Quintero - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -521,13 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Valeria Quintero - Inheritance Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -566,15 +541,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Valeria Quintero - Hangman.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Valeria Quintero - CYOA.py">
+    <entry file="file://$PROJECT_DIR$/Valeria Quintero - Inheritance Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -582,10 +549,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Valeria Quintero - Items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Valeria Quintero Lucky 7's.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Valeria Quintero - CYOA.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <caret line="310" column="0" lean-forward="true" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Valeria Quintero - Hangman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>

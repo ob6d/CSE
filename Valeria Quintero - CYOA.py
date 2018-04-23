@@ -231,22 +231,22 @@ class Room(object):
 
 
 # Initialize Items
-Sword = Sword(Sword, "4 pounds", "silver", "Use the sword to defend yourself")
-SpellBottle = SpellBottle(SpellBottle, "1 pound", None, "Use the spell to heal")
-Crossbow = Crossbow(Crossbow, "50 pounds", "brown", "Use the crossbow and the arrow to attack")
-Arrow = Arrow(Arrow, None, None, "Use the arrows and the crossbow to attack")
-Armor = Armor(Armor, "70 pounds", "bronze", "Use the armor for protection")
-Helmet = Helmet(Helmet, "1 pound", "bronze", "Use the helmet for protection")
-Shield = Shield(Shield, "15 pounds", "silver", "Use the shield to defend")
-BulletproofVest = BulletproofVest(BulletproofVest, "5 pounds", "black", "Use the bulletproof vest for protection")
-Shirt = Shirt(Shirt, None, "blue", None)
-Shoes = Shoes(Shoes, None, "black and white", None)
-Pants = Pants(Pants, None, "black", None)
-FlashLight = FlashLight(FlashLight, None, "red", "Use the flashlight if you can't see")
-Hat = Hat(Hat, None, "white", None)
-HealingPotion = HealingPotion
-Apple = Apple(Apple, None, None, "Eat the apple to get energy")
-MedKit = MedKit(MedKit, "2 pounds", None, "Use the medkit when you're injured or need something")
+sword = Sword(Sword, "4 pounds", "silver", "Use the sword to defend yourself")
+spellBottle = SpellBottle("SpellBottle", "1 pound", None, "Use the spell to heal")
+crossbow = Crossbow("Crossbow", "50 pounds", "brown", "Use the crossbow and the arrow to attack")
+arrow = Arrow("Arrow", None, None, "Use the arrows and the crossbow to attack")
+armor = Armor("Armor", "70 pounds", "bronze", "Use the armor for protection")
+helmet = Helmet("Helmet", "1 pound", "bronze", "Use the helmet for protection")
+shield = Shield("Shield", "15 pounds", "silver", "Use the shield to defend")
+bulletproofVest = BulletproofVest("BulletproofVest", "5 pounds", "black", "Use the bulletproof vest for protection")
+shirt = Shirt("Shirt", None, "blue", None)
+shoes = Shoes("Shoes", None, "black and white", None)
+pants = Pants("Pants", None, "black", None)
+flashLight = FlashLight("FlashLight", None, "red", "Use the flashlight if you can't see")
+hat = Hat("Hat", None, "white", None)
+healingPotion = HealingPotion("HealingPotion", None, None, "Drink the potion to heal yourself")
+apple = Apple("Apple", None, None, "Eat the apple to get energy")
+medKit = MedKit("MedKit", "2 pounds", None, "Use the medkit when you're injured or need something")
 
 # Initialize Rooms
 FRONTHOUSE = Room('Front of House', None, None, None, None, "LIVING_ROOM", "GARDEN", None, None,

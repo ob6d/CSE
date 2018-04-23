@@ -15,12 +15,11 @@ total = (a + b)
 money = 15
 maxRoll = round
 round = 0
-str1 = round
 
 while money >= 0:
-    a = random.randint(1, 6)
-    b = random.randint(1, 6)
-    total = (a + b)
+    a = input
+    b = input
+    total = input
     round += 1
 
     if total == 7:
@@ -36,4 +35,3 @@ while money >= 0:
     elif money == 0:
         print("You lost")
         print("You lasted %d rounds" % round)
-
