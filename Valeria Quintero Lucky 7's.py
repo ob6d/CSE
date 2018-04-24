@@ -1,39 +1,36 @@
-"""You start with $15. Each time you play (round), you make a bet of $1. Two dice (D6) are rolled.
-If the sum of the numbers is the number 7, then you win your bet back, plus an additional $4.
-When the game is run, it will keep running until you have run out of money.
-The program will then display how many rounds it took to run out of money.
-Extension: If you finish early, what was the maximum amount of money you had throughout the game?
-What round did you have the most money?
 """
 import random
 money = 15
 print("You have 15 dollars")
-a = random.randint(1,6)
-b = random.randint(1,6)
-print(a)
-print(b)
-print(a + b)
-total = (a + b)
+wins = 0
+losses = 0
 round = 0
-
+most = money
 while money > 0:
-    a = random.randint(1, 6)
-    b = random.randint(1, 6)
-    total = (int(input(a + b)))
-    round += 1
-
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    print(dice1)
+    print(dice2)
+    total = dice1 + dice2
+    print(total)
     if total == 7:
         money += 4
-        print("You have %d dollars" % money)
-        print("Round %d" % round)
-        break
-
-    if total != 7:
+        wins += 1
+        if most < money:
+            most = money
+            print(most)
+    else:
         money -= 1
-        print("You have %d dollars" % money)
-        print("Round %d" % round)
-        break
+        print(money)
+        losses += 1
+        round += 1
 
-    elif money == 0:
-        print("You lost")
-        print("You lasted %d rounds" % round)
+    print("wins %s" % wins)
+    print("lose %s" % losses)
+    print("round %s" % round)
+    print(most)
+"""
+
+import random
+money = 15
+print("You have 15 dollars")
